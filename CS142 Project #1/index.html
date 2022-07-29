@@ -3,26 +3,37 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
     <title>CS142 Project #1</title>
-    <link rel="stylesheet" type="text/css" href="css/styleB.css" />
+    <link id="changeCSS" rel="stylesheet" type="text/css" href="css/styleB.css" />
+    <script type="text/javascript">
+        function changeCSS() {
+  
+          var link = document.getElementById("changeCSS");
+          link.setAttribute("href", link.getAttribute('href') === 'css/styleA.css' ? 'css/styleB.css' : 'css/styleA.css');
+
+        }
+      </script>
 </head>
 
 <body>
-    <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-
-    <div class="box" id="box1">
-        A
+    <div>
+        <button onclick="changeCSS();">change</button>
     </div>
-    <div class="box alternate" id="box2">
-        B
-    </div>
-    <div class="box" id="box3">
-        C
-    </div>
-    <div class="box alternate" id="box4">
-        D
-    </div>
-    <div class="box" id="box5">
-        E
+    <div class="container">
+        <div class="box firstbox" id="box1">
+            A
+        </div>
+        <div class="box alternate" id="box2">
+            B
+        </div>
+        <div class="box" id="box3">
+            C
+        </div>
+        <div class="box alternate" id="box4">
+            D
+        </div>
+        <div class="box" id="box5">
+            E
+        </div>
     </div>
     <div class="box lastbox" id="box6">
         F
