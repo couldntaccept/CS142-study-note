@@ -3,13 +3,19 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
     <title>CS142 Project #1</title>
-    <link id="changeCSS" rel="stylesheet" type="text/css" href="css/styleB.css" />
+    <link id="changeCSS" rel="stylesheet" type="text/css" href="css/styleC.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+
     <script type="text/javascript">
         function changeCSS() {
-  
-          var link = document.getElementById("changeCSS");
-          link.setAttribute("href", link.getAttribute('href') === 'css/styleA.css' ? 'css/styleB.css' : 'css/styleA.css');
-
+            var link = document.getElementById("changeCSS");
+            if (link.href.match("styleA.css")) {
+                link.href = "css/styleB.css";
+            } else if (link.href.match("styleB.css")) {
+                link.href = "css/styleC.css";
+            } else if (link.href.match("styleC.css")) {
+                link.href = "css/styleA.css";
+            }
         }
       </script>
 </head>
